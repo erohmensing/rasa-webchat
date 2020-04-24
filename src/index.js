@@ -136,6 +136,7 @@ const ConnectedWidget = forwardRef((props, ref) => {
         defaultHighlightCss={props.defaultHighlightCss}
         defaultHighlightAnimation={props.defaultHighlightAnimation}
         defaultHighlightClassname={props.defaultHighlightClassname}
+        disableComposer={props.disableComposer}
       />
     </Provider>
   );
@@ -222,7 +223,8 @@ ConnectedWidget.defaultProps = {
     onChatVisible: () => {},
     onChatHidden: () => {}
   },
-  disableTooltips: false
+  disableTooltips: false,
+  disableComposer: false
 };
 
 export default ConnectedWidget;

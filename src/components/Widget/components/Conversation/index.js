@@ -30,6 +30,7 @@ const Conversation = props =>
     <Sender
       sendMessage={props.sendMessage}
       disabledInput={props.disabledInput}
+      disableComposer={props.disableComposer}
     />
   </div>;
 
@@ -49,7 +50,8 @@ Conversation.propTypes = {
   connectingText: PropTypes.string,
   closeImage: PropTypes.string,
   customComponent: PropTypes.func,
-  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func])
+  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
+  disableComposer: PropTypes.bool
 };
 
 export default Conversation;

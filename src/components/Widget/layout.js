@@ -41,6 +41,7 @@ const WidgetLayout = (props) => {
           closeImage={props.closeImage}
           customComponent={props.customComponent}
           showMessageDate={props.showMessageDate}
+          disableComposer: PropTypes.bool
         />
       )}
       {!props.embedded && (
@@ -53,6 +54,7 @@ const WidgetLayout = (props) => {
           closeImage={props.closeImage}
           displayUnreadCount={props.displayUnreadCount}
           tooltipPayload={props.tooltipPayload}
+          disableComposer={this.props.disableComposer}
         />
       )}
     </div>
@@ -91,7 +93,8 @@ WidgetLayout.propTypes = {
   customComponent: PropTypes.func,
   displayUnreadCount: PropTypes.bool,
   showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-  tooltipPayload: PropTypes.string
+  tooltipPayload: PropTypes.string,
+  disableComposer: PropTypes.bool
 };
 
 export default connect(mapStateToProps)(WidgetLayout);
